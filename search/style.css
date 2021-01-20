@@ -3,7 +3,7 @@
     margin-bottom: 24px;
 }
 
-#searchbar
+.searchbar
 {
     height:0.9cm;
     border:none;
@@ -32,7 +32,7 @@
 
 }
 
-.div:hover, .imagediv:hover{
+.div:hover, .div:focus-within , .imagediv:hover, .imagediv:focus-within{
     box-shadow: 1px 1px 3px 4px rgb(247, 245, 245);
 }
 
@@ -81,6 +81,10 @@
     border:none;
     width:9cm;
     padding-bottom: 0.1cm;
+    font-size:17px;
+    color: rgb(22, 22, 22);
+    height:0.9cm;
+    margin-top: 0.1cm;
 }
 
 
@@ -171,12 +175,8 @@
 
 .advancediv input[type=submit]:hover
 {
-    background-color: rgb(8, 140, 184); 
-}
-
-.advancediv input[type=submit]:hover 
-{
     outline-color: blue;
+    background-color: rgb(8, 140, 184); 
 }
 
 .a{
@@ -211,4 +211,13 @@
 }
 .problem:hover{
     text-decoration: underline;
+}
+
+.searchbar:focus , .imagesearchbar:focus {
+    transition: 0.5s;
+    outline:none;
+}
+
+.imagesearchbar:focus{
+    border-right: solid;
 }
